@@ -56,6 +56,7 @@ main {
   max-width: 1110px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   -moz-column-gap: 30px;
        column-gap: 30px;
 }
@@ -93,19 +94,23 @@ main section.card img {
 main .supervisor__card {
   grid-column-start: 1;
   border-top-color: var(--color-cyan);
+  grid-row: 2/span 2;
 }
 main .team-builder__card {
   grid-column-start: 2;
   border-top-color: var(--color-red);
   margin-bottom: 30px;
+  grid-row: 1/span 2;
 }
 main .karma__card {
   grid-column-start: 2;
   border-top-color: var(--color-orange);
+  grid-row: 3/span 2;
 }
 main .calculator__card {
   grid-column-start: 3;
   border-top-color: var(--color-blue);
+  grid-row: 2/span 2;
 }
 
 @media screen and (max-width: 375px) {
@@ -114,6 +119,7 @@ main .calculator__card {
   }
   main {
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
   }
   main section.card {
     grid-column-start: 1;
@@ -121,15 +127,19 @@ main .calculator__card {
   }
   main .supervisor__card {
     order: 1;
+    grid-row-start: 1;
   }
   main .team-builder__card {
     order: 2;
+    grid-row-start: 2;
   }
   main .karma__card {
     order: 3;
+    grid-row-start: 3;
   }
   main .calculator__card {
     order: 4;
     margin-bottom: 0px;
+    grid-row-start: 4;
   }
 }/*# sourceMappingURL=style.css.map */
